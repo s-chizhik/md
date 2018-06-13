@@ -5,7 +5,7 @@
     border: none;
 }
 body {
-    font: 20px Lato, sans-serif;
+    font: 20px Roboto, sans-serif;
 }
 h1 {
     font-size: 2em;
@@ -23,10 +23,15 @@ section {
 .text_orange {
     color: #e86e2d;
 }
+.text_separated {
+    letter-spacing: .5em;
+}
+
 /* HEADER */
 .header {
     width: 100vw;
     height: 100vh;
+    text-align: center;
 }
 .header_img {
     position: absolute;
@@ -35,14 +40,29 @@ section {
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    opacity: .65;
-    filter: blur(3px)
+}
+.header_opacity {
+    position: absolute;
+    z-index: -1;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    opacity: .4;
 }
 .logo {
-    width: 150px;
+    width: 100px;
     margin: 2vh auto;
     display: block;
 }
+.header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header h4 {
+    font-size: 1.1em;
+}
+
 
 /* COMPONENTS */
 /* COUNTDOWN */
@@ -63,6 +83,12 @@ section {
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
+}
+#countdown span {
+    font-size: 2.4em;
+}
+#countdown .smalltext {
+    font-size: .8em;
 }
 
 @media (orientation: portrait) {
