@@ -2,18 +2,63 @@
 
 <html lang="{#head.lang#}">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>{#head.title#}</title>
-  <meta name="description" content="{#head.description#}">
-  <meta name="author" content="{#head.author#}">
+    <title>{#head.title#}</title>
+    <meta name="description" content="{#head.description#}">
+    <meta name="author" content="{#head.author#}">
 
-  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="./assets/css/missionday.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+    <![endif]-->
 </head>
 
 <body>
-  {#body.template#}
+<div class="wrapper">
+    <nav></nav>
+    <header class="header">
+        <a href="">
+            <img src="./assets/img/md-logo.jpg" alt="" class="logo">
+        </a>
+        <!-- <h1 class="text_white">INGRESS <span class="text_orange">MISSION DAY</span>  DNIPRO</h1>
+        <p class="text_white">Agents, we want to discover Dnipro on 11th of August, 2018. In collaboration with the City of Dnipro we will provide you high quality missions to explore the city on foot together. Sign up to receive more information soon.</p>         -->
+    </header>
+
+    <section class="countdown">
+        <div class="countdown_text">{#countdown.to#} <span class="text_orange">{#countdown.mission_day#}</span> {#countdown.left#}:</div>
+        <div id="countdown">
+            <div>
+                <span class="countdown_days"></span>
+                <div class="smalltext">{#countdown.days#}</div>
+            </div>
+            <div>
+                <span class="countdown_hours"></span>
+                <div class="smalltext">{#countdown.hours#}</div>
+            </div>
+            <div>
+                <span class="countdown_minutes"></span>
+                <div class="smalltext">{#countdown.minutes#}</div>
+            </div>
+            <div>
+                <span class="countdown_seconds"></span>
+                <div class="smalltext">{#countdown.seconds#}</div>
+            </div>
+        </div>
+    </section>
+    <section class="info"></section>
+    <section class="missions"></section>
+    <section class="map"></section>
+    <section class="contacts"></section>
+    <section class="additional"></section>
+    <footer></footer>
+</div>
+
+
 </body>
+<script type="text/javascript" src="./assets/js/missionday.js"></script>
 </html>
+
