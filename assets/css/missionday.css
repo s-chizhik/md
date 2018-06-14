@@ -99,7 +99,6 @@ section {
 
 @media (orientation: landscape) {
     .countdown {
-        bottom: 5vh;
-        top: auto;
+        top: calc(100vh - 150px);
     }
 }
