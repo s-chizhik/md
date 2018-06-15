@@ -3,6 +3,7 @@
 <html lang="{#head.lang#}">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{#head.title#}</title>
     <meta name="description" content="{#head.description#}">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./assets/css/missionday.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,14 +23,17 @@
 <div class="wrapper">
     <nav></nav>
     <header class="header">
+        <div class="header_img"></div>
+        <div class="header_opacity"></div>
         <a href="">
-            <img src="./assets/img/md-logo.jpg" alt="" class="logo">
+            <img src="./assets/img/md-dn-black.png" alt="" class="logo">
         </a>
-        <!-- <h1 class="text_white">INGRESS <span class="text_orange">MISSION DAY</span>  DNIPRO</h1>
-        <p class="text_white">Agents, we want to discover Dnipro on 11th of August, 2018. In collaboration with the City of Dnipro we will provide you high quality missions to explore the city on foot together. Sign up to receive more information soon.</p>         -->
+        <h1 class="text_white">MISSION DAY<h1>
+            <h4 class="text_white text_separated">DNIPRO</h4>
+            <!-- <p class="text_white">Agents, we want to discover Dnipro on 11th of August, 2018. In collaboration with the City of Dnipro we will provide you high quality missions to explore the city on foot together. Sign up to receive more information soon.</p>         -->
     </header>
 
-    <section class="countdown">
+    <section class="countdown text_white">
         <div class="countdown_text">{#countdown.to#} <span class="text_orange">{#countdown.mission_day#}</span> {#countdown.left#}:</div>
         <div id="countdown">
             <div>
