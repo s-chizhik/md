@@ -11,8 +11,12 @@ body {
     -ms-user-select: none;
     user-select: none;      
 }
-a {
-    text-decoration: none;
+a, a:hover, a:visited{
+  border:none;
+  outline:none;
+  text-decoration:none;
+  color:inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 section {
     width: 100%; 
@@ -78,7 +82,7 @@ section {
 .bg_img {
     position: absolute;
     z-index: -1;
-    background: url("../img/bg.png") no-repeat 50% 0;
+    background: url("../img/bg.png") no-repeat 0 0;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -128,6 +132,7 @@ section {
 .section_hello h1 {
     font: bold 4.3em "Exo 2", sans-serif;
     line-height: 1.5em;
+    letter-spacing: .15em;
 }
 .section_hello h2 {
     opacity: .66;
@@ -183,9 +188,6 @@ section {
 
 /* PHONE PORTRAIT */
 @media screen and (orientation: portrait) and (max-width: 420px) {
-    .bg_img {
-        background-position-x: 0;
-    }
     .menu_button {
         display: block;
     }
