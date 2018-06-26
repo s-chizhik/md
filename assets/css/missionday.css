@@ -22,8 +22,9 @@ section {
     width: 100%; 
 }
 .wrapper {
-    display: grid;
-    width: 100%;
+    display: block;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .text_white {
     color: #fff;
@@ -41,7 +42,9 @@ section {
     color: #fff;
     display: grid;
     grid-template-columns: 55% 1fr 20%;
+    grid-template-areas: "logo language-switch registration";
     letter-spacing: 1.3px;
+    width: 100vw;
 }
 .logo {
     width: 86px;
@@ -132,7 +135,7 @@ section {
 .section_hello h1 {
     font: bold 4.3em "Exo 2", sans-serif;
     line-height: 1.5em;
-    letter-spacing: .15em;
+    letter-spacing: 3px;
 }
 .section_hello h2 {
     opacity: .66;
@@ -188,9 +191,53 @@ section {
 
 /* PHONE PORTRAIT */
 @media screen and (orientation: portrait) and (max-width: 420px) {
+    body {
+        font-size: 10px;
+    }
+    .header {
+        grid-template-areas: "menu-button language-switch registration" "logo logo logo";
+        grid-template-columns: 40px 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
     .menu_button {
         display: block;
     }
+    .logo {
+        order: 4;
+        grid-column: span 3;
+        justify-self: center;
+        margin: 8vh auto 2vh;
+    }
+    .section_hello {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .section_hello h1 {
+        font-size: 4em;
+    }
+    .section_hello h2 {
+        letter-spacing: 2.5px;
+        font-size: 2.2em;
+    }
+    .registration {
+        justify-self: end;
+        padding-right: 30px;
+    }
+    .countdown {
+        width: 90%;
+        margin-top: 8vh;
+    }
+    .section_hello hr {
+        display: none;
+    }
+    #countdown span {
+        font-size: 3.8em;
+    }
+    #countdown .smalltext {
+        letter-spacing: 1.5px;
+    }
+
+
 
 }
 
