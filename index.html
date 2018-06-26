@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./assets/css/missionday.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,700,90" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -20,47 +20,64 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <nav></nav>
-    <header class="header">
-        <div class="header_img"></div>
-        <div class="header_opacity"></div>
-        <a href="">
-            <img src="./assets/img/md-dn-black.png" alt="" class="logo">
-        </a>
-        <h1 class="text_white">MISSION DAY<h1>
-            <h4 class="text_white text_separated">DNIPRO</h4>
-            <!-- <p class="text_white">Agents, we want to discover Dnipro on 11th of August, 2018. In collaboration with the City of Dnipro we will provide you high quality missions to explore the city on foot together. Sign up to receive more information soon.</p>         -->
-    </header>
-
-    <section class="countdown text_white">
-        <!--<div class="countdown_text">До <span class="text_orange">Mission Day</span> лишилось:</div>-->
-        <div id="countdown">
+    <div class="wrapper">
+        <header class="header">
+            <div class="menu_button"></div>
+            <a href="./index.html" class="logo">
+                <img src="./assets/img/main-logo.svg" alt="" class="logo-img">
+            </a>  
+            <ul class="language-switch">
+                <li id="ua"><a href="./ua.html">UA</a></li>
+                <li id="ru"><a href="./ru.html">RU</a></li>
+                <li id="en"><a href="./en.html">EN</a></li>
+            </ul>
             <div>
-                <span class="countdown_days"></span>
-                <div class="smalltext">Днів</div>
+                <a href="" class="registration_link text_white">Registration</a>
             </div>
-            <div>
-                <span class="countdown_hours"></span>
-                <div class="smalltext">Годин</div>
+        </header>
+        <nav role="navigation" class="navigation">
+            <ul>
+                <li><a href="" class="active">Hello</a></li>
+                <li><a href="">Description</a></li>
+                <li><a href="">Schedule</a></li>
+                <li><a href="">Missions</a></li>
+                <li><a href="">Hospitality</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </nav>
+        <section class="section_hello">
+            <div class="bg_img"></div>
+            <h1 class="title">MISSION DAY</h1>
+            <h2>11-aug-2018  dnipro  ua</h2>
+            <hr>
+            <div class="countdown">
+                <div id="countdown">
+                    <div>
+                        <span class="countdown_days"></span>
+                        <div class="smalltext">Днів</div>
+                    </div>
+                    <div>
+                        <span class="countdown_hours"></span>
+                        <div class="smalltext">Годин</div>
+                    </div>
+                    <div>
+                        <span class="countdown_minutes"></span>
+                        <div class="smalltext">Хвилин</div>
+                    </div>
+                    <div>
+                        <span class="countdown_seconds"></span>
+                        <div class="smalltext">Секунд</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span class="countdown_minutes"></span>
-                <div class="smalltext">Хвилин</div>
-            </div>
-            <div>
-                <span class="countdown_seconds"></span>
-                <div class="smalltext">Секунд</div>
-            </div>
-        </div>
-    </section>
-    <section class="info"></section>
-    <section class="missions"></section>
-    <section class="map"></section>
-    <section class="contacts"></section>
-    <section class="additional"></section>
-    <footer></footer>
-</div>
+        </section>
+        <section class="info"></section>
+        <section class="missions"></section>
+        <section class="map"></section>
+        <section class="contacts"></section>
+        <section class="additional"></section>
+        <footer></footer>
+    </div>
 
 
 </body>

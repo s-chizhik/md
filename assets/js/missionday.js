@@ -40,3 +40,15 @@ function getTimeRemaining(endtime) {
   var deadline="August 11 2018 10:00:00 GMT+0300"; //for Ukraine
   //var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
   initializeClock('countdown', deadline);
+
+  document.querySelector(".navigation").addEventListener("click", function(e) {
+    e.preventDefault();
+    if (e.target.tagName === "A") {
+      document.querySelectorAll(".navigation a").forEach(function(element){
+        element.classList.remove("active");
+      });
+      e.target.classList.add("active");
+    }
+  })
+
+  document.getElementById(document.documentElement.lang).classList.add("active");

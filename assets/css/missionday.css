@@ -6,16 +6,20 @@
 }
 body {
     font: 20px Roboto, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;      
 }
-h1 {
-    font-size: 2em;
+a {
+    text-decoration: none;
 }
 section {
-    width: 100%;    
+    width: 100%; 
 }
-
 .wrapper {
     display: grid;
+    width: 100%;
 }
 .text_white {
     color: #fff;
@@ -29,55 +33,127 @@ section {
 
 /* HEADER */
 .header {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 55% 1fr 20%;
+    letter-spacing: 1.3px;
 }
-.header_img {
+.logo {
+    width: 86px;
+    margin-left: 50px;
+    display: block;
+}
+.language-switch {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    max-width: 150px;
+}
+.language-switch li {
+    list-style: none;
+}
+.language-switch a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: .33;
+}
+.language-switch .active a {
+    opacity: 1;
+}
+.language-switch a:after {
+    content: " | ";
+    padding: 0 5px;
+    opacity: .33;
+}
+.language-switch li:last-child a:after {
+    content: "";
+}
+.menu_button {
+    display: none;
+}
+
+/* END HEADER */
+
+.bg_img {
     position: absolute;
     z-index: -1;
-    background: url("../img/bg_header.jpg") no-repeat 50% 0;
+    background: url("../img/bg.png") no-repeat 50% 0;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    top: 0;
 }
-.header_opacity {
-    position: absolute;
-    z-index: -1;
-    background-color: #000;
-    width: 100vw;
-    height: 100vh;
-    opacity: .4;
+
+/* NAVIGATION */
+.navigation {
+    position: fixed;
+    width: 20%;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
 }
-.logo {
-    width: 100px;
-    margin: 2vh auto;
-    display: block;
+.navigation li {
+    list-style: none;
 }
-.header h1 {
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.header h4 {
+.navigation a {
+    color: #fff;
+    opacity: .33;
+    text-decoration: none;
     font-size: 1.1em;
+    letter-spacing: 1.5px;
+    line-height: 2.5em;
+    display: block;
+    position: relative;
 }
+.navigation a.active {
+    opacity: 1;
+}
+.navigation a.active:after {
+    content: " ";
+    border: 1px solid #fff;
+    width: 47px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.section_hello {
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+    width: 90%;
+}
+.section_hello h1 {
+    font: bold 4.3em "Exo 2", sans-serif;
+    line-height: 1.5em;
+}
+.section_hello h2 {
+    opacity: .66;
+    font: 2.5em "Exo 2", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5.8px;
+}
+.section_hello hr {
+    display: block;
+    width: 55%;
+    background-color: #fff;
+    height: 1px;
+    opacity: .5;
+    margin: 5vh auto;
+}
+
 
 
 /* COMPONENTS */
 /* COUNTDOWN */
 .countdown {
     text-align: center;
-    font-size: 1.5em;
-    margin: 3vh 0;
-    /* TODO выпилить позже */
-    position: absolute;
-    top: 40vh;
-}
-.countdown_text {
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-bottom: 3vh;
+    width: 60%;
+    margin: auto;
+    text-transform: lowercase;
+    font: 1em "Exo 2", sans-serif;
 }
 #countdown {
     display: grid;
@@ -85,20 +161,42 @@ section {
     grid-template-columns: repeat(4, 1fr);
 }
 #countdown span {
-    font-size: 2.4em;
+    font-size: 4.5em;
 }
 #countdown .smalltext {
-    font-size: .8em;
+    font-size: 1.5em;
+    opacity: .66;
+    font-family: "Roboto";
+    letter-spacing: 3.5px;
+    font-stretch: condensed;
 }
 
-@media (orientation: portrait) {
-    body {
-        font-size: 16px;
-    }
-}
-
+/*TABLET LANDSCAPE*/
 @media (orientation: landscape) {
-    .countdown {
-        top: calc(100vh - 150px);
+
+}
+
+/*TABLET PORTRAIT*/
+@media (orientation: landscape) {
+
+}
+
+/* PHONE PORTRAIT */
+@media screen and (orientation: portrait) and (max-width: 420px) {
+    .bg_img {
+        background-position-x: 0;
     }
+    .menu_button {
+        display: block;
+    }
+
+}
+
+
+/* remove later */
+.section_hello {
+    width: 100%;
+}
+.navigation {
+    display: none;
 }
