@@ -3,16 +3,20 @@
 from lang import ru, ua, en
 
 import re
+import random
+import string
 
 TEMPLATE = '_index.html'
 LANGUAGES = [ru, ua, en]
 
-TEMPLATE_VARS = re.compile('\{#([\w_.]+)#\}')
+TEMPLATE_VARS = re.compile('\{#([\w_.-]+)#\}')
 
 
 def process_template(lang, template):
     variables = TEMPLATE_VARS.findall(template)
     lang_variables = lang.texts
+
+    lang_variables['version'] = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
 
     for variable in variables:
 
