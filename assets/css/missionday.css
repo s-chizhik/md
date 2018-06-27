@@ -52,6 +52,7 @@ section {
     display: block;
 }
 .language-switch {
+    justify-self: end;
     display: grid;
     grid-template-columns: repeat(3, auto);
     max-width: 150px;
@@ -75,6 +76,10 @@ section {
 }
 .language-switch li:last-child a:after {
     content: "";
+}
+.registration {
+    justify-self: end;
+    padding-right: 30px;
 }
 .menu_button {
     display: none;
@@ -199,6 +204,9 @@ section {
         grid-template-columns: 40px 1fr 1fr;
         grid-template-rows: auto auto;
     }
+    .language-switch {
+        justify-self: start;
+    }
     .menu_button {
         display: block;
     }
@@ -218,10 +226,6 @@ section {
     .section_hello h2 {
         letter-spacing: 2.5px;
         font-size: 2.2em;
-    }
-    .registration {
-        justify-self: end;
-        padding-right: 30px;
     }
     .countdown {
         width: 90%;
