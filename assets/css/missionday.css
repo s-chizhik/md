@@ -8,6 +8,9 @@
     --charcoal-grey: #39414f;
     --squash: #f5a623;
 }
+.orange {
+    color: var(--squash);
+}
 body {
     font: 20px Roboto, sans-serif;
     -webkit-user-select: none;
@@ -23,8 +26,7 @@ a, a:hover, a:visited{
   -webkit-tap-highlight-color: transparent;
 }
 section {
-    width: 100%; 
-    height: 100vh;
+    width: 100%;
     background-color: var(--charcoal-grey);
 }
 .wrapper {
@@ -116,7 +118,7 @@ section {
     bottom: 0;
 }
 .navigation ul {
-    transform: translateY(100%);
+    transform: translateY(50%);
 }
 .navigation li {
     list-style: none;
@@ -144,10 +146,10 @@ section {
 }
 .section_hello {
     text-align: center;
-    padding-top: 20px;
     color: #fff;
     background: transparent;
     padding-top: 150px;
+    min-height: calc(100vh - 150px);
 }
 .section_hello h1 {
     font: bold 4.3em "Exo 2", sans-serif;
@@ -203,7 +205,7 @@ section {
 }
 
 .agenda {
-    font-size: 20px;
+    font-size: 1em;
     letter-spacing: 1.3px;
 }
 
@@ -247,6 +249,7 @@ section {
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.12);
     box-shadow: inset 0 0 10px 0 rgba(245, 166, 35, 0.5);
+    position: relative;
 }
 
 .mission img {
@@ -256,14 +259,98 @@ section {
 }
 
 .mission p {
-    font-size: 16px;
+    font-size: .8em;
     letter-spacing: 1.1px;
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     align-self: center;
-    padding: 5px;
+    padding: 5px 30px 5px 5px;
+    box-sizing: border-box;
 }
 
+.mission a::after {
+    content: "";
+    position: absolute;
+    background: url("../img/arrow-right-ic.svg") no-repeat;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    right: 8px;
+    top: 26px;
+}
+
+/* CONTACTS */
+#contacts {
+    padding: 5% 10%;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+#contacts h4 {
+    font-size: 2.1em;
+    letter-spacing: 2.8px;
+    font-family: "Exo2", sans-serif;
+    font-weight: bold;
+    padding-bottom: 10vh;
+    margin-left: 25vw;
+}
+
+#contacts .orange {
+    color: var(--squash);
+}
+
+#contacts p {
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+    padding: 20px 0 25px 25vw;
+}
+
+#contacts div, #contacts p {
+    position: relative;
+}
+
+#contacts .icon::before {
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   top: 11px;
+   margin-left: -60px;
+   background: url("../img/telegram.svg") no-repeat;
+   background-size: contain !important;
+}
+
+#contacts .instagram::before {
+    background: url("../img/instagram.svg") no-repeat;
+}
+
+#contacts .registration::before {
+    background: url("../img/registration.svg") no-repeat;
+}
+
+#contacts .message::before {
+    background: url("../img/message.svg") no-repeat;
+}
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: #323945;
+    color: #fff;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+footer p {
+    text-align: center;
+    font-family: Exo2, sans-serif;
+    margin: auto;
+    padding: 5px;
+}
+footer .copyright {
+    font-size: .75em;
+    letter-spacing: 1px;
+}
 
 /*TABLET LANDSCAPE*/
 @media (orientation: landscape) {
@@ -297,9 +384,14 @@ section {
         justify-self: center;
         margin: 8vh auto 2vh;
     }
+    section {
+        overflow: scroll;
+    }
     .section_hello {
         width: 100vw;
         overflow-x: hidden;
+        padding-top: 35vh;
+        min-height: calc(100vh - 200px);
     }
     .section_hello h1 {
         font-size: 4em;
@@ -321,7 +413,41 @@ section {
     #countdown .smalltext {
         letter-spacing: 1.5px;
     }
-
-
-
+    .navigation {
+        display: none;
+    }
+    #missions {
+        padding: 10px;
+    }
+    #missions .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(24, 60px);
+        width: 100%;
+    }
+    #missions img {
+        width: 40px;
+        height: 40px;
+    }
+    #missions a {
+        height: 60px;
+    }
+    .mission a::after {
+        width: 18px;
+        height: 19px;
+        right: 18px;
+        top: 20px;
+    }
+    #contacts h4 {
+        margin-left: 20vw;
+        padding-bottom: 3vh;
+    }
+    #contacts p {
+        padding: 15px 0 10px 20vw;
+    } 
+    #contacts .icon::before {
+        width: 30px;
+        height: 30px;
+        margin-left: -45px;
+        top: 8px;
+    }
 }
