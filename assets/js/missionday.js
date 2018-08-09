@@ -42,7 +42,7 @@ function getTimeRemaining(endtime) {
   initializeClock('countdown', deadline);
 
   document.querySelector(".navigation").addEventListener("click", function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (e.target.tagName === "A") {
       document.querySelectorAll(".navigation a").forEach(function(element){
         element.classList.remove("active");

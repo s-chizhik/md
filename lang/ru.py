@@ -8,7 +8,7 @@ texts = {
     'head.title': 'Mission Day Днепр',
     'head.author': 'Днепр',
 
-    'head.pre-registration': 'Пре-регистрация',
+    'head.registration': 'Pегистрация',
 
     'countdown.to': 'До',
     'countdown.mission_day': 'Mission Day',

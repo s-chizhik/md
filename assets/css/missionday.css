@@ -4,6 +4,10 @@
     outline: none;
     border: none;
 }
+:root {
+    --charcoal-grey: #39414f;
+    --squash: #f5a623;
+}
 body {
     font: 20px Roboto, sans-serif;
     -webkit-user-select: none;
@@ -20,6 +24,8 @@ a, a:hover, a:visited{
 }
 section {
     width: 100%; 
+    height: 100vh;
+    background-color: var(--charcoal-grey);
 }
 .wrapper {
     display: block;
@@ -45,6 +51,8 @@ section {
     grid-template-areas: "logo language-switch registration";
     letter-spacing: 1.3px;
     width: 100vw;
+    position: absolute;
+    height: 100px;
 }
 .logo {
     width: 86px;
@@ -100,12 +108,15 @@ section {
 /* NAVIGATION */
 .navigation {
     position: fixed;
-    width: 20%;
     right: 0;
-    margin: auto;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 100;
+    height: 100vh;
+    min-width: 210px;
+    top: 0;
+    bottom: 0;
+}
+.navigation ul {
+    transform: translateY(100%);
 }
 .navigation li {
     list-style: none;
@@ -135,7 +146,8 @@ section {
     text-align: center;
     padding-top: 20px;
     color: #fff;
-    width: 90%;
+    background: transparent;
+    padding-top: 150px;
 }
 .section_hello h1 {
     font: bold 4.3em "Exo 2", sans-serif;
@@ -183,6 +195,75 @@ section {
     letter-spacing: 3.5px;
     font-stretch: condensed;
 }
+
+/* SCHEDULE */
+
+.map {
+    min-height: 50vh;
+}
+
+.agenda {
+    font-size: 20px;
+    letter-spacing: 1.3px;
+}
+
+.agenda table {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.agenda .bold {
+    font-weight: bold;
+    color: #fff;
+}
+
+.agenda .orange {
+    color: var(--squash);
+}
+
+.agenda td {
+    padding: 10px;
+}
+
+/* MISSIONS */
+#missions {
+    padding: 50px 100px;
+    box-sizing: border-box;
+}
+
+#missions .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: calc(100% - 200px);
+    height: 100%;
+    grid-gap: 10px;
+}
+
+.mission a {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    height: 80px;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 0 10px 0 rgba(245, 166, 35, 0.5);
+}
+
+.mission img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.mission p {
+    font-size: 16px;
+    letter-spacing: 1.1px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    align-self: center;
+    padding: 5px;
+}
+
 
 /*TABLET LANDSCAPE*/
 @media (orientation: landscape) {
@@ -243,13 +324,4 @@ section {
 
 
 
-}
-
-
-/* remove later */
-.section_hello {
-    width: 100%;
-}
-.navigation {
-    display: none;
 }
