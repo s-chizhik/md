@@ -204,6 +204,18 @@ section {
     min-height: 50vh;
     text-align: center;
 }
+.map_pin {
+    position: relative;
+}
+.map_pin::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    background: url(../img/geo-ic.svg) no-repeat;
+    height: 25px;
+    top: -5px;
+    left: 0;
+}
 
 .agenda {
     font-size: 1em;
@@ -222,6 +234,7 @@ section {
 
 .agenda .orange {
     color: var(--squash);
+    padding-left: 30px;
 }
 
 .agenda td {
